@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title id="site-title"></title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f7fdfb;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    header {
+      margin-top: -50px;
+    }
+    h1 { font-size: 2.5em; margin-bottom: 0.2em; }
+    p { font-size: 1.2em; max-width: 600px; margin: 0 auto; }
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="headline"></h1>
+    <p id="description"></p>
+  </header>
+  <footer>
+    Created by <span id="name"></span>
+  </footer>
+
+  <script>
+    // CONFIG — edit these values to update the site
+    const config = {
+      siteTitle: "Tranquil Wellness",
+      headline: "Breathe. Heal. Thrive.",
+      description: "Welcome to your peaceful online space. Find tips, guides, and daily practices to restore balance and joy.",
+      name: "Tranquil Studio"
+    };
+
+    // APPLY CONFIG
+    document.getElementById("site-title").textContent = config.siteTitle;
+    document.getElementById("headline").textContent = config.headline;
+    document.getElementById("description").textContent = config.description;
+    document.getElementById("name").textContent = config.name;
+  </script>
+</body>
+</html>
